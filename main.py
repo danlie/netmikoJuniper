@@ -19,15 +19,13 @@ ouput = net_connect.send_config_set(config_commands, exit_config_mode=False)
 net_connect.commit()
 exit_config_mode = ['exit']
 net_connect.send_config_set(exit_config_mode, exit_config_mode=False)
-output = net_connect.send_command('show configuration | display set | find protocols')
-print(output)
 print()
+print("Shows the protocols section is gone with patterno not fournd")
+dispaly.displayset('show configuration | display set | find protocols')
 print("ROll back to Original")
-
 rollback_res = ["rollback rescue"]
 net_connect.send_config_set(rollback_res, exit_config_mode=False)
 net_connect.commit()
 exit_config_mode = ['exit']
 net_connect.send_config_set(exit_config_mode, exit_config_mode=False)
-output = net_connect.send_command('show configuration | display set | find protocols')
-print(output)
+dispaly.displayset('show configuration | display set | find protocols')
