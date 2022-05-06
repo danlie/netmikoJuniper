@@ -1,4 +1,5 @@
 from netmiko import ConnectHandler
+import dispaly
 junipersw88_2 = {
 	'device_type': 'juniper',
 	'host':   '192.168.88.2',
@@ -10,8 +11,9 @@ net_connect = ConnectHandler(**junipersw88_2)
 #config_commands = ['set system services telnet']
 #ouput = net_connect.send_config_set(config_commands, exit_config_mode=False)
 #print(ouput)
-output = net_connect.send_command('show configuration | display set | find protocols')
-print(output)
+#output = net_connect.send_command('show configuration | display set | find protocols')
+#print(output)
+dispaly.displayset('show configuration | display set | find protocols')
 config_commands = ['delete protocols']
 ouput = net_connect.send_config_set(config_commands, exit_config_mode=False)
 net_connect.commit()
