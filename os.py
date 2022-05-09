@@ -1,2 +1,3 @@
-import OS
-from OS import
+import os
+
+os.system('dir c:\\')
