@@ -25,3 +25,4 @@ net_connect.commit()
 exit_config_mode = ['exit']
 net_connect.send_config_set(exit_config_mode, exit_config_mode=False)
 dispaly.displayset('show configuration | display set | find protocols')
+print("done")
