@@ -14,3 +14,4 @@ net_connect = ConnectHandler(**junipersw88_2)
 def displayset(junoscommand):
     output = net_connect.send_command('{}'.format(junoscommand))
     print(output)
+# This is test
